@@ -1,2 +1,2 @@
 # binGIRL
-meet and connect with fellow girlbosses in tech with a new bingo game
+encouraging girls to explore STEM with a bingo-themed webapp

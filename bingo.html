@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>binGIRL</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/844417162785456128/916770286735609866/Untitled_design_27.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+
+<style>
+  .desc{
+    width: 75vw;
+    margin: 0 auto;
+    background-color: #F5EBFF;
+    opacity: 0.8
+  }
+
+  .desc p{
+    margin-left: 50px; margin-right: 50px; font-size: 26px
+  }
+
+  .desc .emo{
+    font-size: 50px; width: 30%; text-align: center
+  }
+
+  .desc .inf{
+    text-align: center; border-left: 3px solid black; width: 70%
+  }
+
+
+</style>
+  </head>
+  <body onload="setup()">
+    <div class = "here">
+    <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="bingo.html">Bingo</a></li>
+  <li><a href="data.html">Data Visualization</a></li>
+    </ul>
+
+<h1 class = "bounce">binGIRL challenges</h1>
+
+<div class = "main">
+
+		<table>
+			<tr>
+				<th>B</th>
+				<th>G</th>
+				<th>I</th>
+				<th>R</th>
+				<th>L</th>
+			</tr>
+			<tr>
+				<td id="sq1" onclick = "selected(this.id)"></td>
+				<td id="sq2" onclick = "selected(this.id)"></td>
+				<td id="sq3" onclick = "selected(this.id)"></td>
+				<td id="sq4" onclick = "selected(this.id)"></td>
+				<td id="sq5" onclick = "selected(this.id)"></td>
+			</tr>
+			<tr>
+				<td id="sq6" onclick = "selected(this.id)"></td>
+				<td id="sq7" onclick = "selected(this.id)"></td>
+				<td id="sq8" onclick = "selected(this.id)"></td>
+				<td id="sq9" onclick = "selected(this.id)"></td>
+				<td id="sq10" onclick = "selected(this.id)"></td>
+			</tr>
+			<tr>
+				<td id="sq11" onclick = "selected(this.id)"></td>
+				<td id="sq12" onclick = "selected(this.id)"></td>
+				<td id="sq13" onclick = "selected(this.id)"></td>
+				<td id="sq14" onclick = "selected(this.id)"></td>
+				<td id="sq15" onclick = "selected(this.id)"></td>
+			</tr>
+			<tr>
+				<td id="sq16" onclick = "selected(this.id)"></td>
+				<td id="sq17" onclick = "selected(this.id)"></td>
+				<td id="sq18" onclick = "selected(this.id)"></td>
+				<td id="sq19" onclick = "selected(this.id)"></td>
+				<td id="sq20" onclick = "selected(this.id)"></td>
+			</tr>
+			<tr>
+				<td id="sq21" onclick = "selected(this.id)"></td>
+				<td id="sq22" onclick = "selected(this.id)"></td>
+				<td id="sq23" onclick = "selected(this.id)"></td>
+				<td id="sq24" onclick = "selected(this.id)"></td>
+				<td id="sq25" onclick = "selected(this.id)"></td>
+			</tr>
+		</table>
+    <div id = "back">    </div>
+    <div id = "win">
+      <p style = "font-size: 60px">🥳</p>
+      <p>You win!</p>
+      <button onclick="setup()">Reset</button>
+    </div>
+</div>
+</div>
+<div class = "here2">
+<div class = "info"><br/>
+
+  <h1 class = "bounce">challenge info</h1><br/>
+<p id = "field">STEM field: <span id = "descs"> </span></p> 
+  <table class = "desc">
+    
+    <tr onmouseover = "explainChall('computer science')">
+      		<td class = "emo"> 💻 </td>
+					<td class = "inf">					
+					<p>write 10 lines of code</p>
+		</td>
+    </tr>
+
+  <tr onmouseover = "explainChall('mathematics')">
+      		<td class = "emo"> 📐 </td>
+					<td class = "inf">					
+					<p>participate in a math competition</p>
+		</td>
+  </tr>
+
+  <tr onmouseover = "explainChall('astronomy')">
+ 
+					<td class = "emo"> 🔭 </td>
+					<td class = "inf">					
+					<p>look through a telescope</p>
+		</td>
+    </tr>
+
+   <tr onmouseover = "explainChall('medicine')">
+       				<td class = "emo"> 🏥 </td>
+					<td class = "inf">					
+					<p>volunteer at a hospital</p>
+		</td>    </tr>
+
+     <tr onmouseover = "explainChall('chemistry')">
+					<td class = "emo"> 🧪 </td>
+							<td class = "inf">					
+					<p>balance a chemical equation</p>	</td>
+    </tr>
+  </table>
+  <br/><table class = "desc">
+    <p id = "field">STEM field: <span id = "descs2"></span></p>
+    <tr onmouseover = "explainChall('medicine')">
+					<td class = "emo"> 🩺 </td>
+						<td class = "inf">
+          <p>research a disease</p>		</td>
+    </tr>
+     
+     <tr onmouseover = "explainChall('biology')">
+					<td class = "emo"> 🧬 </td>
+								<td class = "inf">
+          <p>draw out the process of mitosis</p></td>
+    </tr>  
+     <tr onmouseover = "explainChall('general')">	<td class = "emo"> 📢 </td>
+					<td class = "inf">					
+					<p>be an officer in a school club</p>
+		</td>
+    </tr></tr><tr onmouseover = "explainChall('general')">	<td class = "emo"> 🎓 </td>
+					<td class = "inf">					
+
+          <p>finish a hw assignment</p>
+		</td>
+</tr>
+
+<tr onmouseover = "explainChall('psychology')">	<td class = "emo"> 🧠 </td>
+					<td class = "inf">					
+
+          <p>determine your learning style</p>
+		</td>
+</tr>
+</table><br/>
+
+
+<p id = "field">STEM field: <span id = "descs3"> </span></p> 
+  <table class = "desc">
+    
+    <tr onmouseover = "explainChall('mathematics')">
+      		<td class = "emo"> 💭 </td>
+					<td class = "inf">					
+					<p>memorize 10 digits of pi</p>
+		</td>
+    </tr>
+
+  <tr onmouseover = "explainChall('engineering')">
+      				<td class = "emo"> 🐭 </td>
+					<td class = "inf">					
+					<p>build a mouse trap</p>
+		</td>
+  </tr>
+
+  <tr onmouseover = "explainChall('environmental science')">
+ 
+					<td class = "emo"> 🌳 </td>
+					<td class = "inf">					
+					<p>plant a tree or start a garden</p>
+		</td>
+    </tr>
+
+   <tr onmouseover = "explainChall('engineering')">
+       				<td class = "emo"> 🔧 </td>
+					<td class = "inf">					
+					<p>build a mini Goldberg machine</p>
+		</td>    </tr>
+
+     <tr onmouseover = "explainChall('general')">
+					<td class = "emo"> 📋 </td>
+							<td class = "inf">					
+					<p>write down your goals</p>	</td>
+    </tr>
+  </table><br/>
+
+
+<p id = "field">STEM field: <span id = "descs4"> </span></p> 
+  <table class = "desc">
+    
+    <tr onmouseover = "explainChall('general')">
+      		<td class = "emo"> 📚 </td>
+					<td class = "inf">					
+					<p>start reading a new book</p>
+		</td>
+    </tr>
+
+  <tr onmouseover = "explainChall('astrophysics')">
+      				<td class = "emo"> 🚀 </td>
+					<td class = "inf">					
+					<p>watch a rocket launch</p>
+		</td>
+  </tr>
+
+  <tr onmouseover = "explainChall('veterinary science')">
+ 
+					<td class = "emo"> 🐶 </td>
+					<td class = "inf">					
+					<p>care for someone's pet</p>
+		</td>
+    </tr>
+
+   <tr onmouseover = "explainChall('general')">
+       				<td class = "emo"> 🔗 </td>
+					<td class = "inf">					
+					<p>connect with 2 people on LinkedIn</p>
+		</td>    </tr>
+
+     <tr onmouseover = "explainChall('general')">
+					<td class = "emo"> 📅 </td>
+							<td class = "inf">					
+					<p>create a to do list</p>	</td>
+    </tr>
+  </table><br/>
+
+<p id = "field">STEM field: <span id = "descs5"> </span></p> 
+  <table class = "desc">
+    
+    <tr onmouseover = "explainChall('microscopy')">
+      		<td class = "emo"> 🔬 </td>
+					<td class = "inf">					
+					<p>look through a microscope</p>
+		</td>
+    </tr>
+
+  <tr onmouseover = "explainChall('medicine')">
+      				<td class = "emo"> 💉 </td>
+					<td class = "inf">					
+					<p>research COVID vaccines</p>
+		</td>
+  </tr>
+
+  <tr onmouseover = "explainChall('astrophysics')">
+ 
+					<td class = "emo"> 🌍 </td>
+					<td class = "inf">					
+					<p>look up your weight on different planets</p>
+		</td>
+    </tr>
+
+   <tr onmouseover = "explainChall('marine science')">
+       				<td class = "emo"> 🐟 </td>
+					<td class = "inf">					
+					<p>check out your local aquarium</p>
+		</td>    </tr>
+
+     <tr onmouseover = "explainChall('computer science')">
+					<td class = "emo"> 🤖 </td>
+							<td class = "inf">					
+					<p>join a robotics team</p>	</td>
+    </tr>
+  </table><br/>
+
+</div></div>
+
+<script src="script.js"></script>
+<script>
+
+
+
+  
+function explainChall(txt) {
+ document.getElementById("descs").innerHTML = txt;
+ document.getElementById("descs2").innerHTML = txt;
+ document.getElementById("descs3").innerHTML = txt;
+ document.getElementById("descs4").innerHTML = txt;
+ document.getElementById("descs5").innerHTML = txt;
+}</script>
+</body>
+</<html>

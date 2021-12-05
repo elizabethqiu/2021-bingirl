@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>binGIRL</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/844417162785456128/916770286735609866/Untitled_design_27.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+
+<style>
+  td{
+    background-color: transparent
+  }
+
+  td:hover{
+    cursor: auto
+  }
+
+  table{
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  #bigg{
+    font-size: 20vh;
+    background-color: rgb(205, 193, 235, 0.4)
+  }
+</style>
+
+  </head>
+  <body style = "overflow: hidden">
+    <div class = "here" style = "height: 170vh">
+    <ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="bingo.html">Bingo</a></li>
+  <li><a href="data.html">Data Visualization</a></li>
+    </ul>
+
+<table><tr><td>
+<img src = "https://media.discordapp.net/attachments/844417162785456128/916984018371751946/Untitled_design_27.jpg" alt = "logo" style = "height: 40vh; opacity: 0.8"></td><td> <h1 id = "bigg">binGIRL.</h1></td></tr></table>
+
+<!-- put this at the bottom -->
+
+<div id = "ctrl">
+  <a class = "arr" onclick="addDiv(-1)">&#10094;</a>
+  <a class = "arr" onclick="addDiv(1)">&#10095;</a>
+
+</div>
+<div id = "facts">
+
+  <img class="stemFacts" src="https://media.discordapp.net/attachments/844417162785456128/916862488488841296/Womens_enrollment_in_STEM_college_courses_rises_about_6_every_year..png">
+  <img class="stemFacts" src="https://media.discordapp.net/attachments/844417162785456128/916868585513693194/Womens_enrollment_in_STEM_college_courses_rises_about_6_every_year._1.png">
+  <img class="stemFacts" src="https://media.discordapp.net/attachments/844417162785456128/916868958991306752/Womens_enrollment_in_STEM_college_courses_rises_about_6_every_year._2.png">
+</div>
+
+  </div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+var factnum = 1;
+showDivs(factnum);
+
+function addDiv(n) {
+  showDivs(factnum += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("stemFacts");
+  if (n > x.length) {factnum = 1}
+  if (n < 1) {factnum = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[factnum-1].style.display = "block";  
+}
+</script>
+
+    </div>
+
+  </body>
+</html>
